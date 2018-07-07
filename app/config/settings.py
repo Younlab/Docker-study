@@ -23,7 +23,6 @@ STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
 
 STATICFILES_DIRS = [
     STATIC_DIR,
-    STATIC_ROOT,
 ]
 
 # Quick-start development settings - unsuitable for production
@@ -36,7 +35,9 @@ SECRET_KEY = '2liyc&2m)u$z(3&an56u*jhz-^9uqkkl#b0rb_yl7p$ws$e&g)'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    ''
+    'localhost',
+    '127.0.0.1',
+    'amazonaws.com',
 ]
 
 
