@@ -3,6 +3,9 @@ FROM    docker-study:base
 # 프로젝트 root
 ENV     PROJECT_DIR     /srv/project
 
+# install supervisor
+RUN     apt -y install supervisor
+
 # Copy project files
 COPY    .   ${PROJECT_DIR}
 WORKDIR ${PROJECT_DIR}
@@ -33,3 +36,10 @@ RUN     cp -f   ${PROJECT_DIR}/.config/nginx.conf \
         # available에 있는 nginx_app.conf 를 enabled로 링크
         ln -sf  /etc/nginx/sites-available/nginx_app.conf \
                 /etc/nginx/sites-enabled
+
+# Supervisor config
+RUN     cp -f   ${PROJECT_DIR}/.config/supervisor_app.conf \
+                /etc/supervisor/conf.d/
+
+# Run supervisor
+CMD     supervisord -n
