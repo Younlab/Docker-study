@@ -1,7 +1,7 @@
 # 외부 연결이 없어도 프로젝트를 실행할 수 있도록
 from .base import *
 
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
