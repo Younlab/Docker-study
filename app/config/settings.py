@@ -16,7 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_DIR = os.path.dirname(BASE_DIR)
 STATIC_DIR = os.path.join(BASE_DIR,'static')
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(ROOT_DIR,'.media')
 TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
 
 STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
@@ -34,6 +34,8 @@ SECRET_KEY = '2liyc&2m)u$z(3&an56u*jhz-^9uqkkl#b0rb_yl7p$ws$e&g)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+AUTH_USER_MODEL = 'members.User'
+
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
@@ -43,6 +45,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'members.apps.MembersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
