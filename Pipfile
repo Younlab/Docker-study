@@ -8,8 +8,10 @@ django = "*"
 uwsgi = "*"
 pillow = "*"
 "boto3" = "*"
+"psycopg2-binary" = "*"
 
 [dev-packages]
+ipython = "*"
 
 [requires]
 python_version = "3.6"

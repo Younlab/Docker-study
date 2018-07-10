@@ -17,7 +17,7 @@ MEDIA_ROOT = os.path.join(ROOT_DIR,'.media')
 MEDIA_URL = '/media/'
 
 # uWSGI
-WSGI_APPLICATION = 'config.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.local.application'
 
 # DB
 DATABASES = {
@@ -26,4 +26,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+print(DATABASES)
 
