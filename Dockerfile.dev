@@ -9,7 +9,9 @@ ENV     DJANGO_SETTINGS_MODULE  config.settings.dev
 # install supervisor
 RUN     apt -y install supervisor
 
+# Build mode
 ENV     BUILD_MODE      dev
+ENV     DJANGO_SETTINGS_MODULE  config.settings.dev
 
 # Copy project files
 COPY    .   ${PROJECT_DIR}

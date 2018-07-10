@@ -19,3 +19,19 @@ secret_db = json.load(open(os.path.join(SECRET_DIR, 'db.json')))
 # DB
 DATABASES = secret_db['DATABASES']
 print(DATABASES)
+
+
+# django-storages
+INSTALLED_APPS +=[
+    'storages',
+]
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_ACCESS_KEY_ID = secret_db["AWS_ACCESS_KEY_ID"]
+AWS_SECRET_ACCESS_KEY = secret_db["AWS_SECRET_ACCESS_KEY"]
+AWS_STORAGE_BUCKET_NAME = secret_db["AWS_STORAGE_BUCKET_NAME"]
+AWS_DEFAULT_ACL = secret_db["AWS_DEFAULT_ACL"]
+AWS_S3_REGION_NAME = secret_db["AWS_S3_REGION_NAME"]
+AWS_S3_SIGNATURE_VERSION = secret_db["AWS_S3_SIGNATURE_VERSION"]
+
