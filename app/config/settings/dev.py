@@ -25,11 +25,11 @@ print(DATABASES)
 INSTALLED_APPS +=[
     'storages',
 ]
-
+# S3 Burket UPload
 DEFAULT_FILE_STORAGE = 'config.storages.S3DefaultStorage'
 STATICFILES_STORAGE = 'config.storages.S3StaticStorage'
 
-
+# DB PostgreSQL Access
 AWS_ACCESS_KEY_ID = secret_db["AWS_ACCESS_KEY_ID"]
 AWS_SECRET_ACCESS_KEY = secret_db["AWS_SECRET_ACCESS_KEY"]
 AWS_STORAGE_BUCKET_NAME = secret_db["AWS_STORAGE_BUCKET_NAME"]

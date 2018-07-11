@@ -5,6 +5,7 @@ __all__ =(
     'S3DefaultStorage',
 )
 
+# Custom Burcket Settings
 class S3StaticStorage(S3Boto3Storage):
     default_acl = 'public-read'
     location = 'static'
