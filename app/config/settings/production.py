@@ -3,6 +3,12 @@ from .base import *
 
 DEBUG = False
 
+ALLOWED_HOSTS = [
+    'localhost',
+    '.amazonaws.com',
+    '127.0.0.1',
+]
+
 # Static
 STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
 STATIC_URL = '/static/'
